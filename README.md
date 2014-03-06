@@ -9,14 +9,16 @@ Just add the files to an XCode project or compile it in the terminal. When you h
 
 ...and wait. 
 
-It will first build the hierarchy and then start generating the image. This might take a while :P (a few minutes or so). 
+It will first build the hierarchy and then start generating the image. This might take a while. (a few minutes or so). 
+
+# Making your own file
 
 If you want to create your own .txt-file, just create rows that follows these guidelines: 
 
-# x, y, z, radius
+x, y, z, radius
 
 For every row, there will a sphere. You can redo the code so that you can draw boxes instead. 
 
-DISCLAIMER: 
+# DISCLAIMER: 
 This is my very first C++ program. 
  
