@@ -34,12 +34,12 @@ int main (int argc, char * const argv[]) {
 		start1 = clock();
 		scene->Build();
 		end1 = clock();
-		printf("\nBuild time: %.4f sec\n", (double)(end1 - start1) / CLOCKS_PER_SEC);
+		printf("\nBVH Build time: %.4f sec\n", (double)(end1 - start1) / CLOCKS_PER_SEC);
 		
 		start2 = clock();
 		scene->Print("./finalpicture.tga");
 		end2 = clock();
-		printf("\nPrint time: %.4f sec\n", (double)(end2 - start2) / CLOCKS_PER_SEC);
+		printf("\nRender time: %.4f sec\n", (double)(end2 - start2) / CLOCKS_PER_SEC);
 		
 		delete scene;
     }
