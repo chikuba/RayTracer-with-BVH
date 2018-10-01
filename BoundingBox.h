@@ -8,32 +8,32 @@
 #include <vector>
 
 /* This is bounding box that is created by using a point(where the box begins) 
-	   _____
-	 /     /|
-	+-----+ |
-	|	  | |
-	| /   | / 
-	X-----+/ <-- where the X is 
-	
-	and the length of the sides. It also have one special feature and that is the center. 
-	This is used so when we later put theses boxes into in hierarchy of boxes 
-	and need to sort them in the following matter:
-	
-	+----------------------------+
-	|         |                  |
-	+----------------------------+
-	   ||                ||
-	   \/                \/
-	+-----+        +-----------+
-    |  |  |        |     |     |
-	+-----+        +-----------+
-	 |   |           |      | 
-	 O   O           O      O
-	  
-	So when we are looking for the center, we need to be sure that the ratio of 
-	objects on either side is accurate so we get a nice tree-structure.
-	  
-	*/
+   _____
+ /|    /|
++-----+ |
+| |   | |
+| /   | / 
+X-----+/ <-- where the X is 
+
+and the length of the sides. It also have one special feature and that is the center. 
+This is used so when we later put theses boxes into in hierarchy of boxes 
+and need to sort them in the following matter:
+
++----------------------------+
+|         |                  |
++----------------------------+
+   ||                ||
+   \/                \/
++-----+        +-----------+
+|  |  |        |     |     |
++-----+        +-----------+
+ |   |           |      | 
+ O   O           O      O
+
+So when we are looking for the center, we need to be sure that the ratio of 
+objects on either side is accurate so we get a nice tree-structure.
+
+*/
 
 class BoundingBox : public Box {
     private:
