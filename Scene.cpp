@@ -158,49 +158,45 @@ void Scene::Print(const char *file_name_cp) {
 	
 	for(unsigned short int y = 0; y < this->height_usi; ++y) 
 	for(unsigned short int x = 0; x < this->width_usi;  ++x) {
+	    output_color = ColorRGB(); // empty
 		
-		output_color = ColorRGB(); // empty
+	    ColorRGB temp_color;
 		
-		ColorRGB temp_color;
-		
-		for(float fx = float(x); fx < (x + 1.0f); fx += 0.5f) 
-		for(float fy = float(y); fy < (y + 1.0f); fy += 0.5f) {
-			
-			temp_color = ColorRGB();
-			
-			
-			//*** ORTHOGONAL VIEW ***//
-			if(this->orthogonal_b) { 
+	    for(float fx = float(x); fx < (x + 1.0f); fx += 0.5f) 
+	    for(float fy = float(y); fy < (y + 1.0f); fy += 0.5f) {
+	        temp_color = ColorRGB();
+	
+		//*** ORTHOGONAL VIEW ***//
+		if(this->orthogonal_b) { 
 				
-				Ray view_ray = Ray(Vec3(fx, fy, -10000.0f), Vec3(0.0f, 0.0f, 1.0f));
-				temp_color += this->ColorAtIntersection(view_ray);
-			
+		    Ray view_ray = Ray(Vec3(fx, fy, -10000.0f), Vec3(0.0f, 0.0f, 1.0f));
+		    temp_color += this->ColorAtIntersection(view_ray);
 				
-			//*** PERSPECTIVE VIEW ***//
-			} else { 
-				Vec3 direction_v = Vec3(((fx - (0.5f * this->width_usi)) / projection_distance_f), 
-										((fy - (0.5f * this->height_usi)) / projection_distance_f), 1.0f); 
+		//*** PERSPECTIVE VIEW ***//
+		} else { 
+		    Vec3 direction_v = Vec3(((fx - (0.5f * this->width_usi)) / projection_distance_f), 
+					    ((fy - (0.5f * this->height_usi)) / projection_distance_f), 1.0f); 
 				
 
-				float direction_normal_f = direction_v * direction_v;
+		    float direction_normal_f = direction_v * direction_v;
 				
-				if(direction_normal_f == 0.0f) break;
+		    if(direction_normal_f == 0.0f) break;
 				
-				Ray view_ray = Ray(Vec3((0.5f * this->width_usi), 
-										(0.5f * this->height_usi), 0.0f), 
-								   (direction_v * Math::InvSqrt(direction_normal_f)));
+		    Ray view_ray = Ray(Vec3((0.5f * this->width_usi), 
+					    (0.5f * this->height_usi), 0.0f), 
+				       (direction_v * Math::InvSqrt(direction_normal_f)));
 				
-				temp_color += this->ColorAtIntersection(view_ray);
-			}
-			
-			output_color += temp_color;
-		}
+		    temp_color += this->ColorAtIntersection(view_ray);
+	        }
+		   
+	        output_color += temp_color;
+	    }
 		
-		output_color.Control();
+	    output_color.Control();
 		
-		imageFile.put((unsigned char)(output_color.blue_f * 255.0f))
-				 .put((unsigned char)(output_color.green_f * 255.0f))
-				 .put((unsigned char)(output_color.red_f * 255.0f));
+	    imageFile.put((unsigned char)(output_color.blue_f * 255.0f))
+		     .put((unsigned char)(output_color.green_f * 255.0f))
+		     .put((unsigned char)(output_color.red_f * 255.0f));
 	}
 	
 	puts("done");
