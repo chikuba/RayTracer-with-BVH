@@ -1,7 +1,7 @@
 RayTracer with BVH
 ==================
 
-A RayTracer I made years ago from scratch. It uses BVH to speed things up (even though it's quite slow).
+A RayTracer I made years ago (2009 ish) from scratch. It uses BVH to speed things up (even though it's quite slow).
 
 Just add the files to an XCode project or compile it in the terminal. When you have the executable, just run: 
 
