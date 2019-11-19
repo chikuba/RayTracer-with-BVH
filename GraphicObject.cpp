@@ -10,13 +10,13 @@ GraphicObject::GraphicObject() {
 
 GraphicObject::GraphicObject(const Vec3 &position, const Vec3 &side) {
     this->position_v = position;
-    this->side_v 	 = side;
-    this->shader_m 	 = Material();
+    this->side_v     = side;
+    this->shader_m   = Material();
 }
 
 GraphicObject::GraphicObject(const Vec3 &position, const Vec3 &side, const Material &shader) {
     this->position_v = position;
-    this->side_v 	 = side;
+    this->side_v     = side;
     this->shader_m   = shader;
 }
 
