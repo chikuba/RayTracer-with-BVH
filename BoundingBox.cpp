@@ -10,7 +10,6 @@ BoundingBox::BoundingBox(std::vector<GraphicObject*> *go_p_container_p) : Box() 
     if(go_p_container_p->size() > 1) {
 		
     	// goes trough all of the objects, looking for the max/min of all the axis
-		
         for(size_t i = 0; i < go_p_container_p->size(); i++) {			
             temp_min_v.x = Math::Min(go_p_container_p->at(i)->GetMin().x, temp_min_v.x);
             temp_min_v.y = Math::Min(go_p_container_p->at(i)->GetMin().y, temp_min_v.y);
@@ -20,7 +19,7 @@ BoundingBox::BoundingBox(std::vector<GraphicObject*> *go_p_container_p) : Box() 
             temp_max_v.z = Math::Max(go_p_container_p->at(i)->GetMax().z, temp_max_v.z);
         }
         
-      /* _____
+       /* _____
 	 /     /|
 	+-----+ |
 	|  |  |
