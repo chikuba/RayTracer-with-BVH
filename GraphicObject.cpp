@@ -29,3 +29,4 @@ Material GraphicObject::GetMaterial() const {
 void GraphicObject::Print() const {
     printf("\nGraphic Object");
 }
+
