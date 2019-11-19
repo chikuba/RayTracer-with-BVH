@@ -14,4 +14,3 @@ Light::Light(const Vec3 &position, const ColorRGB &intensity) {
 
 Light::~Light() {}
 
-
