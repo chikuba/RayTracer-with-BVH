@@ -38,3 +38,4 @@ class Vec3 {
 };
 
 #endif
+
