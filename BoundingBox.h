@@ -36,24 +36,24 @@ objects on either side is accurate so we get a nice tree-structure.
 
 class BoundingBox : public Box {
     private:
-		Vec3 center_v;
-		unsigned short int size_usi;
-	//
+        Vec3 center_v;
+        unsigned short int size_usi;
+    //
     public:
-		BoundingBox(std::vector<GraphicObject*> *go_p_container_p);
-		~BoundingBox();
+        BoundingBox(std::vector<GraphicObject*> *go_p_container_p);
+        ~BoundingBox();
 		
-		bool GetSideOfCenter(GraphicObject *go_p);
-		bool Intersect(const Ray &view_ray, float &distance_f);
+        bool GetSideOfCenter(GraphicObject *go_p);
+        bool Intersect(const Ray &view_ray, float &distance_f);
 		
-		unsigned short int Type() const;
-		void Print() const;
-	//
+        unsigned short int Type() const;
+        void Print() const;
+    //
 };
 
 #endif
 
 inline unsigned short int BoundingBox::Type() const { 
-	return 2; 
+    return 2; 
 }
 
