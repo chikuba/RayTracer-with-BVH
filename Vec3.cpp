@@ -135,3 +135,4 @@ float Vec3::Length() const {
 void Vec3::Print() const {
     printf("Vec3(%.2f, %.2f, %.2f)\n", this->x, this->y, this->z);
 }
+
