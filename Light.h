@@ -33,3 +33,4 @@ inline Vec3 Light::GetPosition() const {
 inline ColorRGB Light::GetIntensity() const {
     return this->intensity_c;
 }
+
