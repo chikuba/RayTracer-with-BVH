@@ -59,3 +59,4 @@ inline void Math::Swap(float &a, float &b) {
     a = b;
     b = temp;
 }
+
