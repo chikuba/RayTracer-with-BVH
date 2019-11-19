@@ -175,7 +175,6 @@ void Scene::Print(const char *file_name_cp) {
 		} else { 
 		    Vec3 direction_v = Vec3(((fx - (0.5f * this->width_usi)) / projection_distance_f), 
 					    ((fy - (0.5f * this->height_usi)) / projection_distance_f), 1.0f); 
-				
 
 		    float direction_normal_f = direction_v * direction_v;
 				
@@ -201,3 +200,4 @@ void Scene::Print(const char *file_name_cp) {
 	puts("done");
     }
 }
+
