@@ -57,3 +57,4 @@ void ColorRGB::Control() {
     this->green_f = Encode(Math::Min(this->green_f, 1.0f));
     this->blue_f  = Encode(Math::Min(this->blue_f, 1.0f));
 }
+
