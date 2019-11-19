@@ -9,7 +9,6 @@
 #include "BoundingBox.h"
 #endif
 
-
 /*
 This is a simple tree-structure that might look like this:
 
