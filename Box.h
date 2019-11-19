@@ -9,23 +9,23 @@
 
 class Box : public GraphicObject {
     public:
-		Box();
-		Box(const Vec3 &position, const Vec3 &side);
-		Box(const Vec3 &position, const float &side);
-		Box(const Vec3 &position, const Vec3 &side, const Material &shader);
-		virtual ~Box();
+        Box();
+        Box(const Vec3 &position, const Vec3 &side);
+        Box(const Vec3 &position, const float &side);
+        Box(const Vec3 &position, const Vec3 &side, const Material &shader);
+        virtual ~Box();
 		
-		Vec3 GetMin();
-		Vec3 GetMid();
-		Vec3 GetMax();
-		Vec3 GetNormalAt(Vec3 &intersection_point_v);
+        Vec3 GetMin();
+        Vec3 GetMid();
+        Vec3 GetMax();
+        Vec3 GetNormalAt(Vec3 &intersection_point_v);
 		
-		virtual bool GetSideOfCenter(GraphicObject *go_p);
-		virtual bool Intersect(const Ray &view_ray, float &distance_f);
+        virtual bool GetSideOfCenter(GraphicObject *go_p);
+        virtual bool Intersect(const Ray &view_ray, float &distance_f);
 		
-		virtual unsigned short int Type() const;
-		virtual void Print() const;
-	//
+        virtual unsigned short int Type() const;
+        virtual void Print() const;
+    //
 };
 
 #endif
@@ -43,11 +43,11 @@ inline Vec3 Box::GetMax() {
 }
 
 inline bool Box::GetSideOfCenter(GraphicObject *go_p) { 
-	return false; 
+    return false; 
 }
 
 inline unsigned short int Box::Type() const { 
-	return 1; 
+    return 1; 
 }
 
 
