@@ -7,8 +7,7 @@ BoundingBox::BoundingBox(std::vector<GraphicObject*> *go_p_container_p) : Box() 
     Vec3 temp_max_v = go_p_container_p->at(0)->GetMax(); // ...
 	
     // if its more than 1 object in the container, go through the process. otherwise, just do a simple box
-    if(go_p_container_p->size() > 1) {
-		
+    if(go_p_container_p->size() > 1) {	
     	// goes trough all of the objects, looking for the max/min of all the axis
         for(size_t i = 0; i < go_p_container_p->size(); i++) {			
             temp_min_v.x = Math::Min(go_p_container_p->at(i)->GetMin().x, temp_min_v.x);
@@ -19,7 +18,7 @@ BoundingBox::BoundingBox(std::vector<GraphicObject*> *go_p_container_p) : Box() 
             temp_max_v.z = Math::Max(go_p_container_p->at(i)->GetMax().z, temp_max_v.z);
         }
         
-       /* _____
+        /* _____
 	 /     /|
 	+-----+ |
 	|  |  |
@@ -56,7 +55,6 @@ BoundingBox::BoundingBox(std::vector<GraphicObject*> *go_p_container_p) : Box() 
                     count_usi = 0;
 
                     for(size_t j = 0; j < go_p_container_p->size(); ++j) {
-						
                         switch(i) {
                             case 0:
                                 this->center_v.x = temp_center_v.x;
