@@ -19,7 +19,6 @@ class ColorRGB {
         ColorRGB operator*(const float &f);
 		
         void Control();
-	
         float Encode(const float &color) const;
     //
 };
