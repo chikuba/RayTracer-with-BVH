@@ -45,7 +45,7 @@ class BoundingVolumeHierarchy {
         };
         NODE *root;
         std::vector<GraphicObject*> go_p_container;
-	//
+    //
     public:
         BoundingVolumeHierarchy();
         ~BoundingVolumeHierarchy();
@@ -70,7 +70,7 @@ class BoundingVolumeHierarchy {
         void PrintDepth();
         
         bool IsEmpty() const;
-        //
+    //
 };
 
 #endif
@@ -94,7 +94,4 @@ inline void BoundingVolumeHierarchy::PrintDepth() {
 inline bool BoundingVolumeHierarchy::IsEmpty() const { 
     return (this->root == NULL); 
 }
-
-
-
 
