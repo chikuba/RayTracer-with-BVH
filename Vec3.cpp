@@ -9,23 +9,23 @@ Vec3::Vec3() {
 }
 
 Vec3::Vec3(const float &x, const float &y, const float &z) {
-	this->x = x;
-	this->y = y;
-	this->z = z;
+    this->x = x;
+    this->y = y;
+    this->z = z;
 }
 
 Vec3::~Vec3() {}
 
 Vec3 Vec3::operator=(const Vec3 &v) {
-	this->x = v.x;
-	this->y = v.y;
-	this->z = v.z;
+    this->x = v.x;
+    this->y = v.y;
+    this->z = v.z;
 	
     return *this;
 }
 
 Vec3 Vec3::operator+(const Vec3 &v) {
-	Vec3 temp(*this);
+    Vec3 temp(*this);
 	
     temp.x += v.x;
     temp.y += v.y;
@@ -35,7 +35,7 @@ Vec3 Vec3::operator+(const Vec3 &v) {
 }
 
 Vec3 Vec3::operator-(const Vec3 &v) {
-	Vec3 temp(*this);
+    Vec3 temp(*this);
 	
     temp.x -= v.x;
     temp.y -= v.y;
@@ -45,7 +45,7 @@ Vec3 Vec3::operator-(const Vec3 &v) {
 }
 
 Vec3 Vec3::operator/(const float &f) {
-	Vec3 temp(*this);
+    Vec3 temp(*this);
 	
     temp.x /= f;
     temp.y /= f;
@@ -55,7 +55,7 @@ Vec3 Vec3::operator/(const float &f) {
 }
 
 Vec3 Vec3::operator/(const Vec3 &v) {
-	Vec3 temp(*this);
+    Vec3 temp(*this);
 	
     temp.x /= v.x;
     temp.y /= v.y;
@@ -65,7 +65,7 @@ Vec3 Vec3::operator/(const Vec3 &v) {
 }
 
 Vec3 Vec3::operator*(const float &f) {
-	Vec3 temp(*this);
+    Vec3 temp(*this);
 	
     temp.x *= f;
     temp.y *= f;
@@ -75,7 +75,7 @@ Vec3 Vec3::operator*(const float &f) {
 }
 
 float Vec3::operator*(const Vec3 &v) {
-	return ((this->x * v.x) + (this->y * v.y) + (this->z * v.z));
+    return ((this->x * v.x) + (this->y * v.y) + (this->z * v.z));
 }
 
 bool Vec3::operator>(const Vec3 &v) const {
@@ -121,17 +121,17 @@ bool Vec3::operator!=(const Vec3 &v) const {
 }
 
 Vec3 Vec3::Normalize() const {
-	Vec3 temp(*this);
+    Vec3 temp(*this);
 	
-	temp = temp / temp.Length();
+    temp = temp / temp.Length();
 	
-	return temp;
+    return temp;
 }
 
 float Vec3::Length() const {
-	return Math::Sqrt(Math::Pow(this->x, 2) + Math::Pow(this->y, 2) + Math::Pow(this->z, 2));
+    return Math::Sqrt(Math::Pow(this->x, 2) + Math::Pow(this->y, 2) + Math::Pow(this->z, 2));
 }
 
 void Vec3::Print() const {
-	printf("Vec3(%.2f, %.2f, %.2f)\n", this->x, this->y, this->z);
+    printf("Vec3(%.2f, %.2f, %.2f)\n", this->x, this->y, this->z);
 }
