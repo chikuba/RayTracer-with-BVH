@@ -105,7 +105,7 @@ GraphicObject* BoundingVolumeHierarchy::GetIntersectionList(const Ray &view_ray,
         }
     }
 
-	if (current >= 0) {// means we found an object
+    if (current >= 0) {// means we found an object
         return go_p_container.at(current);
     }
     else return NULL;
@@ -186,3 +186,4 @@ unsigned short int BoundingVolumeHierarchy::GetDepth(NODE *node_p) const {
     }
     else return 0;
 }
+
