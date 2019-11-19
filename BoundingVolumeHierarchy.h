@@ -38,10 +38,10 @@ Continue on in like this until we find the leaf that is first hit by the ray.
 
 class BoundingVolumeHierarchy {
     private:
-		struct NODE {
-           NODE *left;
-           NODE *right;
-           GraphicObject *data;
+        struct NODE {
+            NODE *left;
+            NODE *right;
+            GraphicObject *data;
         };
         NODE *root;
         std::vector<GraphicObject*> go_p_container;
@@ -51,48 +51,48 @@ class BoundingVolumeHierarchy {
         ~BoundingVolumeHierarchy();
 		
         bool Add(GraphicObject *go_p);
-		bool Build();
+        bool Build();
         void Building(std::vector<GraphicObject*> *part_p_container_p);
         
         void InsertNode(GraphicObject *go_p);
         GraphicObject* GetIntersectionList(const Ray &view_ray, float &distance_f);
-		GraphicObject* GetIntersection(const Ray &view_ray, float &distance_f);
-		BoundingVolumeHierarchy::NODE* SearchForClosestObject(NODE *node_p, const Ray &view_ray, float &distance_f);
+        GraphicObject* GetIntersection(const Ray &view_ray, float &distance_f);
+        BoundingVolumeHierarchy::NODE* SearchForClosestObject(NODE *node_p, const Ray &view_ray, float &distance_f);
 		
-		void Preorder(NODE *node_p) const;
-		void PrintPreorder();
-		void Inorder(NODE *node_p) const;
-		void PrintInorder();
-		void Postorder(NODE *node_p) const;
-		void PrintPostorder();
+        void Preorder(NODE *node_p) const;
+        void PrintPreorder();
+        void Inorder(NODE *node_p) const;
+        void PrintInorder();
+        void Postorder(NODE *node_p) const;
+        void PrintPostorder();
 	
-		unsigned short int GetDepth(NODE *node_p) const;
-		void PrintDepth();
+        unsigned short int GetDepth(NODE *node_p) const;
+        void PrintDepth();
         
-		bool IsEmpty() const;
-	//
+        bool IsEmpty() const;
+        //
 };
 
 #endif
 
 inline void BoundingVolumeHierarchy::PrintPreorder() {
-	this->Preorder(this->root);
+    this->Preorder(this->root);
 }
 
 inline void BoundingVolumeHierarchy::PrintInorder() {
-	this->Inorder(this->root);
+    this->Inorder(this->root);
 }
 
 inline void BoundingVolumeHierarchy::PrintPostorder() {
-	this->Postorder(this->root);
+    this->Postorder(this->root);
 }
 
 inline void BoundingVolumeHierarchy::PrintDepth() {
-	printf("\nDepth: %d \n", this->GetDepth(this->root));
+    printf("\nDepth: %d \n", this->GetDepth(this->root));
 }
 
 inline bool BoundingVolumeHierarchy::IsEmpty() const { 
-	return (this->root == NULL); 
+    return (this->root == NULL); 
 }
 
 
