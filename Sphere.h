@@ -7,22 +7,22 @@
 
 class Sphere : public GraphicObject {
     public:
-		Sphere();
-		Sphere(const Vec3 &position, const float &radie);
-		Sphere(const Vec3 &position, const float &radie, const Material &shader);
-		~Sphere();
+        Sphere();
+        Sphere(const Vec3 &position, const float &radie);
+        Sphere(const Vec3 &position, const float &radie, const Material &shader);
+        ~Sphere();
 		
-		Vec3 GetMin();
-		Vec3 GetMid();
-		Vec3 GetMax();
-		Vec3 GetNormalAt(Vec3 &intersection_point_v);
+        Vec3 GetMin();
+        Vec3 GetMid();
+        Vec3 GetMax();
+        Vec3 GetNormalAt(Vec3 &intersection_point_v);
 		
-		bool GetSideOfCenter(GraphicObject *go_p);
-		bool Intersect(const Ray &view_ray, float &distance_f);
+        bool GetSideOfCenter(GraphicObject *go_p);
+        bool Intersect(const Ray &view_ray, float &distance_f);
 		
-		unsigned short int Type() const;
-		void Print() const;
-	//
+        unsigned short int Type() const;
+        void Print() const;
+    //
 };
 
 #endif
@@ -40,11 +40,11 @@ inline Vec3 Sphere::GetMax() {
 }
 
 inline bool Sphere::GetSideOfCenter(GraphicObject *go_p) { 
-	return false; 
+    return false; 
 }
 
 inline unsigned short int Sphere::Type() const { 
-	return 1; 
+    return 1; 
 }
 
 
