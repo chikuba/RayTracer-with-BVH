@@ -11,6 +11,8 @@ $ ./RayTracer allteapot.txt
 
 It will first build the hierarchy and then start generating the image. This might take a while. (a few minutes or so). 
 
+![allteapot.txt](Example.png "allteapot.txt")
+
 # Making your own file and other changes
 
 If you want to create your own .txt-file, just create rows that follows these guidelines: 
