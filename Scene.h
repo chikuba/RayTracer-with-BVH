@@ -57,6 +57,3 @@ inline void Scene::AddLight(Light *new_light_p) {
     light_p_container.push_back(new_light_p);
 }
 
-
-
-
