@@ -6,28 +6,28 @@
 #endif
 
 class ColorRGB {
-	public:
-		float red_f, green_f, blue_f;
+    public:
+        float red_f, green_f, blue_f;
 		
-		ColorRGB();
-		ColorRGB(const float &red, const float &green, const float &blue);
-		~ColorRGB();
+        ColorRGB();
+        ColorRGB(const float &red, const float &green, const float &blue);
+        ~ColorRGB();
 		
-		ColorRGB operator+=(const ColorRGB &color);
-		bool operator!=(const ColorRGB &color) const;
-		ColorRGB operator*(const ColorRGB &color);
-		ColorRGB operator*(const float &f);
+        ColorRGB operator+=(const ColorRGB &color);
+        bool operator!=(const ColorRGB &color) const;
+        ColorRGB operator*(const ColorRGB &color);
+        ColorRGB operator*(const float &f);
 		
-		void Control();
+        void Control();
 	
-		float Encode(const float &color) const;
-	//
+        float Encode(const float &color) const;
+    //
 };
 
 #endif
 
 inline float ColorRGB::Encode(const float &color) const { 
-	return Math::Pow(color, 2); 
+    return Math::Pow(color, 2); 
 }
 
 
