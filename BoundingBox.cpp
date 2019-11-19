@@ -170,3 +170,4 @@ void BoundingBox::Print() const {
     this->side_v.Print();
     this->center_v.Print();
 }
+
