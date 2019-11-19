@@ -39,3 +39,4 @@ inline Vec3 Ray::GetDirection() const {
 inline void Ray::SetDirection(const Vec3 &new_direction) {
     this->direction_v = new_direction;
 }
+
