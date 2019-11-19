@@ -11,7 +11,7 @@ Scene::Scene() {
 }
 
 Scene::Scene(const unsigned short int &width, const unsigned short int &height, const bool &orthogonal, const float &fov) {
-    this->bvh_p 	   = new BoundingVolumeHierarchy();
+    this->bvh_p         = new BoundingVolumeHierarchy();
     this->width_usi     = width;
     this->height_usi    = height;
     this->orthogonal_b  = orthogonal;
@@ -23,8 +23,7 @@ Scene::~Scene() {}
 void Scene::AddGraphicsFromFile(const char* file_name_cp) {
     FILE *file;
 	
-    if((file = fopen(file_name_cp, "r")) != NULL) {
-		
+    if((file = fopen(file_name_cp, "r")) != NULL) {		
     	float temp_x, temp_y, temp_z, temp_r;
 		
         while(fscanf(file, "%f%f%f%f*[^\n]",  &temp_x, &temp_y, &temp_z, &temp_r) != EOF) { // radius
