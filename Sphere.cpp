@@ -18,6 +18,7 @@ Vec3 Sphere::GetNormalAt(Vec3 &intersection_point_v) {
     if(temp_f != 0.0f) { 
         temp_f = Math::InvSqrt(temp_f); 
         return (intersection_point_v - this->position_v) * temp_f;
+	    
     } else return Vec3();
 }
 
@@ -47,3 +48,4 @@ void Sphere::Print() const {
     this->position_v.Print();
     this->side_v.Print();
 }
+
