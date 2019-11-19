@@ -23,7 +23,7 @@ GraphicObject::GraphicObject(const Vec3 &position, const Vec3 &side, const Mater
 GraphicObject::~GraphicObject() {}
 
 Material GraphicObject::GetMaterial() const {
-	return this->shader_m;
+    return this->shader_m;
 }
 
 void GraphicObject::Print() const {
