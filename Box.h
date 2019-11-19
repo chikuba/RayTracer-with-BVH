@@ -50,5 +50,3 @@ inline unsigned short int Box::Type() const {
     return 1; 
 }
 
-
-
