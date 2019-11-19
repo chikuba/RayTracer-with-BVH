@@ -18,30 +18,29 @@
 
 
 int main (int argc, char * const argv[]) {
-	clock_t start1, end1, start2, end2;
+    clock_t start1, end1, start2, end2;
     Scene *scene = new Scene();
     
     if(argc <= 1) {
-		
-		fprintf(stderr, "No source file specified. (You need to specify a .txt-file.)\n");		
+        fprintf(stderr, "No source file specified. (You need to specify a .txt-file.)\n");		
 		
     } else {
-		scene->AddGraphicsFromFile(argv[1]);
-		scene->AddLight(new Light(Vec3(100.0f, 0.0f, -10000.0f), ColorRGB(0.6f, 0.2f, 0.0f)));
-		scene->AddLight(new Light(Vec3(700.0f, 200.0f, -1000.0f), ColorRGB(0.2f, 0.3f, 0.1f)));
-		scene->AddLight(new Light(Vec3(640.0f, 0.0f, 10000.0f), ColorRGB(0.1f, 0.3f, 0.4f)));
+        scene->AddGraphicsFromFile(argv[1]);
+        scene->AddLight(new Light(Vec3(100.0f, 0.0f, -10000.0f), ColorRGB(0.6f, 0.2f, 0.0f)));
+        scene->AddLight(new Light(Vec3(700.0f, 200.0f, -1000.0f), ColorRGB(0.2f, 0.3f, 0.1f)));
+        scene->AddLight(new Light(Vec3(640.0f, 0.0f, 10000.0f), ColorRGB(0.1f, 0.3f, 0.4f)));
 		
-		start1 = clock();
-		scene->Build();
-		end1 = clock();
-		printf("\nBVH Build time: %.4f sec\n", (double)(end1 - start1) / CLOCKS_PER_SEC);
+        start1 = clock();
+        scene->Build();
+        end1 = clock();
+        printf("\nBVH Build time: %.4f sec\n", (double)(end1 - start1) / CLOCKS_PER_SEC);
 		
-		start2 = clock();
-		scene->Print("./finalpicture.tga");
-		end2 = clock();
-		printf("\nRender time: %.4f sec\n", (double)(end2 - start2) / CLOCKS_PER_SEC);
+        start2 = clock();
+        scene->Print("./finalpicture.tga");
+        end2 = clock();
+        printf("\nRender time: %.4f sec\n", (double)(end2 - start2) / CLOCKS_PER_SEC);
 		
-		delete scene;
+        delete scene;
     }
 	
     return 0;
