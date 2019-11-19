@@ -32,7 +32,6 @@ and need to sort them in the following matter:
 
 So when we are looking for the center, we need to be sure that the ratio of 
 objects on either side is accurate so we get a nice tree-structure.
-
 */
 
 class BoundingBox : public Box {
@@ -57,7 +56,4 @@ class BoundingBox : public Box {
 inline unsigned short int BoundingBox::Type() const { 
 	return 2; 
 }
-
-
-
 
