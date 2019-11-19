@@ -30,6 +30,3 @@ inline float ColorRGB::Encode(const float &color) const {
     return Math::Pow(color, 2); 
 }
 
-
-
-
