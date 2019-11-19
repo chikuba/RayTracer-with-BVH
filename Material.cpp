@@ -13,7 +13,7 @@ Material::Material(const ColorRGB &diffuse, const ColorRGB &specular, const floa
     this->diffuse_c    = diffuse;
     this->specular_c   = specular;
     this->reflection_f = reflection;
-    this->power_usi	   = power;
+    this->power_usi    = power;
 }
 
 Material::~Material() {}
