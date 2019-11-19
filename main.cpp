@@ -13,9 +13,7 @@
  
     The ray tracer are not real time and it renders the image pixel per pixel as
     an uncompressed .tga-file (24 bit RGB). 
-
 **/
-
 
 int main (int argc, char * const argv[]) {
     clock_t start1, end1, start2, end2;
