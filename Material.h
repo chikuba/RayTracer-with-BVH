@@ -25,7 +25,6 @@ class Material {
 
 #endif
 
-
 inline ColorRGB Material::GetDiffuse() const {
     return this->diffuse_c;
 }
@@ -41,3 +40,4 @@ inline float Material::GetReflection() const {
 inline unsigned short int Material::GetPower() const {
     return this->power_usi;
 }
+
