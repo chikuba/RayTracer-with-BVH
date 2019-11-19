@@ -17,3 +17,4 @@ Material::Material(const ColorRGB &diffuse, const ColorRGB &specular, const floa
 }
 
 Material::~Material() {}
+
